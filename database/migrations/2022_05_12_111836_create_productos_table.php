@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->text('imagen', 10000);
             $table->string('titulo', 50);
             $table->string('genero', 30);
             $table->string('autor', 50);

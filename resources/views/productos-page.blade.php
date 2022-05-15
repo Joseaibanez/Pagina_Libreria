@@ -7,23 +7,29 @@
 @endsection
 
 @section ('content-area')
-<h1>PAGINA para venta de productos</h1>
+<h1>Venta de productos</h1>
 <br>
 <table id="tablaProductos" class="table table-striped">
     <thead class="bg-secondary text-white">
         <tr>
             <th>Id</th>
+            <th>Imagen</th>
             <th>Título</th>
             <th>Género</th>
             <th>Autor</th>
             <th>Precio</th>
-            <th>Opciones</th>
+            <th>Ver ficha completa</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($productos as $producto)
             <tr>
                 <td>{{ $producto->id }}</td>
+                <td>
+                    <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+                        <img class="img-thumbnail img-responsive" src="{{ $producto->imagen }}" alt="">
+                    </div>
+                </td>
                 <td>{{ $producto->titulo }}</td>
                 <td>{{ $producto->genero }}</td>
                 <td>{{ $producto->autor }}</td>

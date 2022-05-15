@@ -19,6 +19,9 @@ class MainController extends Controller
         return view('work-page');
     }
     public function login() {
-        return view('login-page');
+        return view('login');
+    }
+    public function carrito() {
+        return view('carrito');
     }
 }
